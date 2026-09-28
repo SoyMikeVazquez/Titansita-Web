@@ -1,0 +1,193 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.sectionAlt {
+  background-color: var(--muted);
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Business Explanation */
+.businessGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .businessGrid { grid-template-columns: 1fr; }
+}
+.businessText p {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+/* Products */
+.productsContainer {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0 3rem 0;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.productsContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+.productCard {
+  min-width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+.productCard:hover {
+  transform: translateY(-10px);
+}
+.productImage {
+  width: 100%;
+  height: 200px;
+  background-color: var(--muted);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.productTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.productPrice {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Reviews */
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.reviewCard {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.reviewStars {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.reviewText {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+.reviewAuthor {
+  font-weight: 700;
+}
+
+/* App Download */
+.appDownloadFullWidth {
+  background: #000;
+  color: white;
+  padding: 6rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.appDownloadGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .appDownloadGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+.appDownloadTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Closing Sales */
+.closingSales {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background: var(--foreground);
+  color: #fff;
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+}
+.footerLogo {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.footerLinks a {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.footerLinks a:hover {
+  opacity: 1;
+}
+.footerCopyright {
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
